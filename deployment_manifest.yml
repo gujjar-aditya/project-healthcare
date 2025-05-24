@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: healthcare-cont
-          image: adityagujjar/project-healthcare:V1.0
+          image: adityagujjar/project-healthcare:V1.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8082
