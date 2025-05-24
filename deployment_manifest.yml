@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mydeployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: deployment
+  template:
+    metadata:
+      labels:
+        name: deployment
+    spec:
+      containers:
+        - name: healthcare-cont
+          image: adityagujjar/project-healthcare:V1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8082
